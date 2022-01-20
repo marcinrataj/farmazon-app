@@ -13,7 +13,7 @@ function Home() {
                 <div className='home__row'>
                     <Product
                         id='23456'
-                        title='Zakrzywiony monitor 27" 75Hz LED HDMI VGA Wbudowane głośniki'
+                        title='Zakrzywiony monitor 27" 75Hz LED HDMI VGA, Posiada Wbudowane głośniki'
                         price='209.97'
                         image='https://i.pinimg.com/originals/2d/c8/19/2dc819f8ed0a0ec1d0ab05f0ef2c52e8.jpg'
                         rating={4}/>
@@ -35,7 +35,7 @@ function Home() {
                     <Product
                         id='93872'
                         title='Smartfon SAMSUNG Galaxy S21 8/128GB 5G 6.2" 120Hz Szary'
-                        price='21.99'
+                        price='499.99'
                         image='https://i.pinimg.com/originals/15/76/f8/1576f85248b8390118835d65280a1e7b.jpg'
                         rating={5}/>
                     <Product
@@ -60,9 +60,9 @@ function Home() {
                         rating={5}/>
                     <Product
                         id='10934'
-                        title='Tablet APPLE iPad Air 10.9" 4 gen. 256 GB Wi-Fi Różowe złoto'
-                        price='499.00'
-                        image='https://i.pinimg.com/originals/23/6a/9a/236a9ab4b56dab7c3edbb5c318b451bd.jpg'
+                        title='Apple MacBook Air Laptop: Apple M1 Chip, 13” Retina Display, 8GB RAM, 256GB SSD'
+                        price='999.00'
+                        image='https://i.pinimg.com/originals/ca/b6/11/cab611944c6d3b7ccab65744a91cb256.jpg'
                         rating={5}/>
                 </div>
                 <div className='home__row'>

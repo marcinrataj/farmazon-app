@@ -1,7 +1,32 @@
 import React from 'react';
 import './Product.css'
+import { useStateValue} from "../../StateProvider/StateProvider";
+import basket from '../../reducer/reducer'
 
-function Product({title, image, price, rating}) {
+
+function Product({id, title, image, price, rating}) {
+    //state nie ruszamy, dispatch manipulujemy
+
+    const [{basket}, dispatch] = useStateValue();
+// inaczej rozumiejąc dispatch jest jak pistolet,w sensie zmienia wartość
+
+    // console.log(`this is the basket >>> `, basket);
+    //
+    //wyślij przedmiot do warstwy danych
+    const addToBasket = () => {
+        dispatch({                      //dispatch znaczy że manipuluje wastwą danych
+            type: 'ADD_TO_BASKET',
+            item: {
+                id: id,                 //id
+                title: title,           //nazwa
+                image: image,           //obraz pruduktu
+                price: price,           //cena
+                rating: rating,         //ilość gwiazdek
+
+            },
+        })
+    }
+
     return (
         <div className="product">
             <div className="product__info">
@@ -12,14 +37,14 @@ function Product({title, image, price, rating}) {
                 </p>
                 <div className="product__rating">
                     {Array(rating)
-                        .fill()             //Metoda fill() uzupełnia wszystkie elementy tablicy
-                        .map((_, i) => (    //map() zwróci nam nową tablicę
-                            <p>⭐</p>        //zwraca nam ilość gwiazdek , my tylko wpiszemy ile
+                        .fill()
+                        .map((_, i) => (
+                            <p>⭐</p>
                         ))}
                 </div>
             </div>
             <img src={image} alt=""/>
-            <button>Dodaj do koszyka</button>
+            <button onClick={addToBasket}>Dodaj do koszyka</button>
         </div>
     );
 }
